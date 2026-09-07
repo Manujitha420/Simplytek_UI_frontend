@@ -245,11 +245,29 @@ img {
   font-weight: 500;
   line-height: 20px;
   color: #CBD5E1;
+  position: relative;
+  padding: 4px 0;
   transition: color var(--transition-fast);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #0EA5E9 0%, #6366F1 100%);
+  border-radius: 2px;
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-link:hover, .nav-link.active {
   color: #0EA5E9;
+}
+
+.nav-link:hover::after {
+  width: 100%;
 }
 
 /* Nav Actions */
