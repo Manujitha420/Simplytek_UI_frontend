@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
 let currentSlideIndex = 0;
 let slideInterval = null;
 const SLIDE_COUNT = 5;
-const AUTO_PLAY_DELAY = 5500;
+const AUTO_PLAY_DELAY = 10000;
 
 function initHeroSlider() {
   const slides = document.querySelectorAll('.hero-slide');
@@ -22,6 +22,9 @@ function initHeroSlider() {
   const heroSection = document.getElementById('heroSection');
 
   if (!slides.length || !dots.length) return;
+
+  // Initialize to Slide 0 (Headphones)
+  goToSlide(0);
 
   function goToSlide(index) {
     if (index < 0) index = SLIDE_COUNT - 1;
