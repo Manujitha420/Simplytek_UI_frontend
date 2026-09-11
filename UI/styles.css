@@ -379,23 +379,49 @@ img {
   z-index: 3;
 }
 
+.hero-bg-overlay-radial-phone {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 100.00% 100.00% at 20.00% 60.00%, rgba(56, 189, 248, 0.13) 0%, rgba(56, 189, 248, 0) 55%);
+  z-index: 3;
+}
+
 /* Headphone Product Crop Image Layer */
 .hero-product-crop-container {
   position: absolute;
-  top: 50%;
-  right: 4%;
+  top: 52%;
+  right: 0%;
   transform: translateY(-50%);
   z-index: 4;
   pointer-events: none;
 }
 
 .hero-headphone-crop-img {
-  width: 735px;
-  max-width: 48vw;
-  max-height: 80vh;
+  width: 820px;
+  max-width: 55vw;
+  max-height: 90vh;
   height: auto;
   object-fit: contain;
-  filter: drop-shadow(0 20px 50px rgba(0, 0, 0, 0.7));
+  filter: drop-shadow(0 25px 60px rgba(0, 0, 0, 0.75));
+}
+
+/* Smartphone Product Crop Image Layer */
+.hero-phone-crop-container {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+  z-index: 4;
+  pointer-events: none;
+}
+
+.hero-phone-crop-img {
+  width: 500px;
+  max-width: 42vw;
+  max-height: 75vh;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 25px 60px rgba(0, 0, 0, 0.75));
 }
 
 /* Hero Content Overlay */
@@ -463,6 +489,16 @@ img {
   display: inline-block;
 }
 
+.hero-accent-heading-future {
+  color: #38BDF8;
+  font-size: 88px;
+  font-family: 'Bruno Ace SC', 'Space Grotesk', sans-serif;
+  font-weight: 400;
+  line-height: 93.28px;
+  letter-spacing: 0px;
+  display: inline-block;
+}
+
 .heading-period {
   color: #ffffff;
   font-family: 'Space Grotesk', sans-serif;
@@ -504,6 +540,24 @@ img {
 .btn-shop-now:hover {
   transform: translateY(-2px);
   box-shadow: 0px 8px 30px rgba(14, 165, 233, 0.50);
+}
+
+.btn-explore-ghost {
+  padding: 16px 40px;
+  border-radius: 16px;
+  color: #ffffff;
+  font-size: 14px;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 600;
+  line-height: 20px;
+  background: transparent;
+  transition: all var(--transition-fast);
+  cursor: pointer;
+}
+
+.btn-explore-ghost:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #38BDF8;
 }
 
 /* Responsive Scaling for Mobile/Tablet */

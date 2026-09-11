@@ -9,7 +9,7 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&family=Unbounded:wght@400;600;700;800;900&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&family=Unbounded:wght@400;600;700;800;900&family=Syne:wght@700;800&display=swap" rel="stylesheet">
   
   <!-- Styles -->
   <link rel="stylesheet" href="styles.css">
@@ -96,7 +96,7 @@
         <div class="hero-slides-wrapper">
           
           <!-- SLIDE 1: HEADPHONES & EARPHONES -->
-          <article class="hero-slide active" data-slide="0">
+          <article class="hero-slide" data-slide="0">
             <!-- Background Image & Overlay Layers -->
             <div class="hero-slide-bg-container">
               <img src="Images/BG/0801dd1423fa7c87b7b588d47af82ce8b25ef1f8.jpg" alt="Headphones Ambient Studio Background" class="hero-bg-img">
@@ -158,28 +158,38 @@
           </article>
 
           <!-- SLIDE 3: SMARTPHONES -->
-          <article class="hero-slide" data-slide="2">
-            <div class="hero-content">
-              <div class="category-tag">
-                <span class="tag-line"></span>
-                <span class="tag-text">SMARTPHONES</span>
+          <article class="hero-slide active" data-slide="2">
+            <!-- Background Image & Overlay Layers -->
+            <div class="hero-slide-bg-container">
+              <img src="Images/BG/3147af643d1a2f13f52036aeaea5fac0b6bb8050.jpg" alt="Smartphone Studio Ambient Background" class="hero-bg-img">
+              <div class="hero-bg-overlay-linear"></div>
+              <div class="hero-bg-overlay-radial-phone"></div>
+            </div>
+
+            <!-- Smartphone Product Crop Image Layer -->
+            <div class="hero-phone-crop-container">
+              <img src="Images/Crop/550252c942e1e715d07a433402f5efe4da71f100.png" alt="Flagship Smartphone Crop" class="hero-phone-crop-img float-animation">
+            </div>
+
+            <!-- Content Overlay -->
+            <div class="hero-content-layer">
+              <div class="category-tag-container">
+                <div class="category-tag-bar"></div>
+                <span class="category-tag-text">SMARTPHONES</span>
               </div>
-              <h1 class="hero-title">
-                The <span class="text-stencil-outline">FUTURE</span><br>
-                Is In Your Hands.
-              </h1>
-              <p class="hero-description">
+
+              <div class="hero-title-group">
+                <h1 class="hero-main-heading">The <span class="hero-accent-heading-future">Future</span><br>Is In Your Hands.</h1>
+              </div>
+
+              <p class="hero-subtext">
                 The latest flagship smartphones with pro grade cameras, powerful processors and all day battery life.
               </p>
-              <div class="hero-cta-group">
-                <button class="btn btn-primary btn-gradient" onclick="showToast('Opening Smartphone Store...')">Shop Now</button>
-                <button class="btn btn-secondary-ghost" onclick="showToast('Exploring Smartphone Collection...')">Explore Collection</button>
+
+              <div class="hero-action-group">
+                <button class="btn btn-shop-now" onclick="showToast('Opening Smartphone Store...')">Shop Now</button>
+                <button class="btn btn-explore-ghost" onclick="showToast('Exploring Smartphone Collection...')">Explore Collection</button>
               </div>
-            </div>
-            <div class="hero-visual">
-              <div class="visual-bg-glow glow-gold"></div>
-              <span class="visual-watermark">17</span>
-              <img src="Images/iPhone-removebg-preview.png" alt="iPhone 17 Pro Flagship Smartphone" class="product-img float-animation">
             </div>
           </article>
 
