@@ -9,7 +9,7 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Manrope:wght@400;500;600;700;800&family=Rock+Salt&family=Space+Grotesk:wght@500;600;700;800&family=Unbounded:wght@400;600;700;800;900&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Manrope:wght@400;500;600;700;800&family=Rock+Salt&family=Russo+One&family=Space+Grotesk:wght@500;600;700;800&family=Unbounded:wght@400;600;700;800;900&family=Syne:wght@700;800&display=swap" rel="stylesheet">
   
   <!-- Styles -->
   <link rel="stylesheet" href="styles.css">
@@ -194,7 +194,7 @@
           </article>
 
           <!-- SLIDE 4: CAMERAS & EQUIPMENT -->
-          <article class="hero-slide active" data-slide="3">
+          <article class="hero-slide" data-slide="3">
             <!-- Background Image & Overlay Layers -->
             <div class="hero-slide-bg-container">
               <img src="Images/BG/b8a1eeb26d006747c5bf25eb31f222c79327bce8.jpg" alt="Camera Studio Ambient Background" class="hero-bg-img">
@@ -233,28 +233,41 @@
           </article>
 
           <!-- SLIDE 5: DRONES -->
-          <article class="hero-slide" data-slide="4">
-            <div class="hero-content">
-              <div class="category-tag">
-                <span class="tag-line"></span>
-                <span class="tag-text">DRONES</span>
+          <article class="hero-slide active" data-slide="4">
+            <!-- Background Image & Overlay Layers -->
+            <div class="hero-slide-bg-container">
+              <img src="Images/BG/Image (DRONES).png" alt="Drones Studio Ambient Background" class="hero-bg-img">
+              <div class="hero-bg-overlay-linear"></div>
+              <div class="hero-bg-overlay-radial-drone"></div>
+            </div>
+
+            <!-- Drone Product Crop Image Layer -->
+            <div class="hero-drone-crop-container">
+              <img src="Images/Crop/DJI_ Camera Drones 1.png" alt="DJI Professional Camera Drone Crop" class="hero-drone-crop-img float-animation">
+            </div>
+
+            <!-- Content Overlay -->
+            <div class="hero-content-layer">
+              <div class="category-tag-container">
+                <div class="category-tag-bar"></div>
+                <span class="category-tag-text">DRONES</span>
               </div>
-              <h1 class="hero-title">
-                See the World<br>
-                from a<br>
-                <span class="text-expanded text-gradient-cyan-purple">New Perspective.</span>
-              </h1>
-              <p class="hero-description">
+
+              <div class="hero-title-group">
+                <h1 class="hero-main-heading">
+                  See the World<br>from a <br>
+                  <span class="hero-accent-heading-drone">New Perspective</span><span class="heading-period">.</span>
+                </h1>
+              </div>
+
+              <p class="hero-subtext">
                 Professional and recreational drones with 4K stabilised cameras — explore the skies like never before.
               </p>
-              <div class="hero-cta-group">
-                <button class="btn btn-primary btn-gradient" onclick="showToast('Opening Drones Store...')">Shop Now</button>
-                <button class="btn btn-secondary-ghost" onclick="showToast('Exploring Drone Models...')">Explore Collection</button>
+
+              <div class="hero-action-group">
+                <button class="btn btn-shop-now" onclick="showToast('Opening Drones Store...')">Shop Now</button>
+                <button class="btn btn-explore-ghost" onclick="showToast('Exploring Drone Collection...')">Explore Collection</button>
               </div>
-            </div>
-            <div class="hero-visual">
-              <div class="visual-bg-glow glow-sky"></div>
-              <img src="Images/DJI_ Camera Drones.jpg" alt="DJI FPV Camera Drone" class="product-img float-animation">
             </div>
           </article>
 
@@ -265,8 +278,8 @@
           <button class="page-dot active" data-index="0" aria-label="Slide 1"></button>
           <button class="page-dot" data-index="1" aria-label="Slide 2"></button>
           <button class="page-dot" data-index="2" aria-label="Slide 3"></button>
-          <button class="page-dot active" data-index="3" aria-label="Slide 4"></button>
-          <button class="page-dot" data-index="4" aria-label="Slide 5"></button>
+          <button class="page-dot" data-index="3" aria-label="Slide 4"></button>
+          <button class="page-dot active" data-index="4" aria-label="Slide 5"></button>
         </div>
       </section>
     </main>

@@ -393,6 +393,13 @@ img {
   z-index: 3;
 }
 
+.hero-bg-overlay-radial-drone {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 100.00% 100.00% at 20.00% 60.00%, rgba(99, 102, 241, 0.13) 0%, rgba(99, 102, 241, 0) 55%);
+  z-index: 3;
+}
+
 /* Headphone Product Crop Image Layer */
 .hero-product-crop-container {
   position: absolute;
@@ -445,6 +452,25 @@ img {
   width: 820px;
   max-width: 55vw;
   max-height: 92vh;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 25px 60px rgba(0, 0, 0, 0.75));
+}
+
+/* Drone Product Crop Image Layer */
+.hero-drone-crop-container {
+  position: absolute;
+  top: 46%;
+  right: -4%;
+  transform: translateY(-50%);
+  z-index: 4;
+  pointer-events: none;
+}
+
+.hero-drone-crop-img {
+  width: 860px;
+  max-width: 58vw;
+  max-height: 95vh;
   height: auto;
   object-fit: contain;
   filter: drop-shadow(0 25px 60px rgba(0, 0, 0, 0.75));
@@ -535,6 +561,16 @@ img {
   display: inline-block;
 }
 
+.hero-accent-heading-drone {
+  color: #38BDF8;
+  font-size: 88px;
+  font-family: 'Russo One', sans-serif;
+  font-weight: 400;
+  line-height: 93.28px;
+  letter-spacing: 0px;
+  display: inline-block;
+}
+
 .heading-period {
   color: #ffffff;
   font-family: 'Space Grotesk', sans-serif;
@@ -600,17 +636,17 @@ img {
 @media (max-width: 1024px) {
   .hero-main-heading { font-size: 56px; }
   .hero-accent-heading { font-size: 52px; }
-  .hero-accent-heading-future, .hero-accent-heading-camera { font-size: 56px; line-height: 1.1; }
-  .hero-headphone-crop-img, .hero-camera-crop-img { max-width: 480px; }
+  .hero-accent-heading-future, .hero-accent-heading-camera, .hero-accent-heading-drone { font-size: 56px; line-height: 1.1; }
+  .hero-headphone-crop-img, .hero-camera-crop-img, .hero-drone-crop-img { max-width: 480px; }
 }
 
 @media (max-width: 768px) {
   .hero-main-heading { font-size: 40px; }
   .hero-accent-heading { font-size: 36px; }
-  .hero-accent-heading-future, .hero-accent-heading-camera { font-size: 40px; line-height: 1.1; }
+  .hero-accent-heading-future, .hero-accent-heading-camera, .hero-accent-heading-drone { font-size: 40px; line-height: 1.1; }
   .hero-content-layer { padding: 60px 24px; }
-  .hero-headphone-crop-img, .hero-camera-crop-img { max-width: 320px; position: relative; right: auto; transform: none; margin-top: 30px; }
-  .hero-product-crop-container, .hero-camera-crop-container { position: relative; top: auto; right: auto; transform: none; display: flex; justify-content: center; }
+  .hero-headphone-crop-img, .hero-camera-crop-img, .hero-drone-crop-img { max-width: 320px; position: relative; right: auto; transform: none; margin-top: 30px; }
+  .hero-product-crop-container, .hero-camera-crop-container, .hero-drone-crop-container { position: relative; top: auto; right: auto; transform: none; display: flex; justify-content: center; }
 }
 
 
