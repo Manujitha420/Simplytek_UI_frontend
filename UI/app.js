@@ -23,8 +23,8 @@ function initHeroSlider() {
 
   if (!slides.length || !dots.length) return;
 
-  // Initialize to Slide 2 (Smartphones)
-  goToSlide(2);
+  // Initialize to Slide 4 (Cameras & Equipment)
+  goToSlide(3);
 
   function goToSlide(index) {
     if (index < 0) index = SLIDE_COUNT - 1;
