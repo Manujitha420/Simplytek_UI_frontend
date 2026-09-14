@@ -23,8 +23,8 @@ function initHeroSlider() {
 
   if (!slides.length || !dots.length) return;
 
-  // Initialize to Slide 5 (Drones)
-  goToSlide(4);
+  // Initialize to Slide 2 (Laptops)
+  goToSlide(1);
 
   function goToSlide(index) {
     if (index < 0) index = SLIDE_COUNT - 1;

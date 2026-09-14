@@ -9,7 +9,7 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Manrope:wght@400;500;600;700;800&family=Rock+Salt&family=Russo+One&family=Space+Grotesk:wght@500;600;700;800&family=Unbounded:wght@400;600;700;800;900&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Manrope:wght@400;500;600;700;800&family=Rock+Salt&family=Russo+One&family=Space+Grotesk:wght@500;600;700;800&family=Unbounded:wght@400;600;700;800;900&family=Zen+Dots&family=Syne:wght@700;800&display=swap" rel="stylesheet">
   
   <!-- Styles -->
   <link rel="stylesheet" href="styles.css">
@@ -132,28 +132,42 @@
           </article>
 
           <!-- SLIDE 2: LAPTOPS -->
-          <article class="hero-slide" data-slide="1">
-            <div class="hero-content">
-              <div class="category-tag">
-                <span class="tag-line"></span>
-                <span class="tag-text">LAPTOPS</span>
+          <article class="hero-slide active" data-slide="1">
+            <!-- Background Image & Overlay Layers -->
+            <div class="hero-slide-bg-container">
+              <img src="Images/BG/Image (LAPTOPS).png" alt="Laptop Studio Ambient Background" class="hero-bg-img">
+              <div class="hero-bg-overlay-linear"></div>
+              <div class="hero-bg-overlay-radial-laptop"></div>
+            </div>
+
+            <!-- Laptop Product Crop Image Layer -->
+            <div class="hero-laptop-crop-container">
+              <img src="Images/Crop/Mac Bro _ Social Media Design _ Reels Cover 1.png" alt="MacBook Professional Laptop Crop" class="hero-laptop-crop-img float-animation">
+            </div>
+
+            <!-- Content Overlay -->
+            <div class="hero-content-layer">
+              <div class="category-tag-container">
+                <div class="category-tag-bar"></div>
+                <span class="category-tag-text">LAPTOPS</span>
               </div>
-              <h1 class="hero-title">
-                Power Meets<br>
-                <span class="text-expanded text-gradient-purple">Precision</span><br>
-                and Portability.
-              </h1>
-              <p class="hero-description">
+
+              <div class="hero-title-group">
+                <h1 class="hero-main-heading">
+                  Power Meets<br>
+                  <span class="hero-accent-heading-laptop">Precision</span><br>
+                  and Portability<span class="heading-period">.</span>
+                </h1>
+              </div>
+
+              <p class="hero-subtext">
                 Ultra thin laptops with desktop class performance engineered for creators, coders and professionals.
               </p>
-              <div class="hero-cta-group">
-                <button class="btn btn-primary btn-gradient" onclick="showToast('Redirecting to Laptops Catalog...')">Shop Now</button>
-                <button class="btn btn-secondary-ghost" onclick="showToast('Loading Laptop Specs...')">Explore Collection</button>
+
+              <div class="hero-action-group">
+                <button class="btn btn-shop-now" onclick="showToast('Redirecting to Laptops Catalog...')">Shop Now</button>
+                <button class="btn btn-explore-ghost" onclick="showToast('Exploring Laptop Collection...')">Explore Collection</button>
               </div>
-            </div>
-            <div class="hero-visual">
-              <div class="visual-bg-glow glow-blue"></div>
-              <img src="Images/laptop_hero.jpg" alt="Sleek Modern Laptop" class="product-img float-animation">
             </div>
           </article>
 
@@ -233,7 +247,7 @@
           </article>
 
           <!-- SLIDE 5: DRONES -->
-          <article class="hero-slide active" data-slide="4">
+          <article class="hero-slide" data-slide="4">
             <!-- Background Image & Overlay Layers -->
             <div class="hero-slide-bg-container">
               <img src="Images/BG/Image (DRONES).png" alt="Drones Studio Ambient Background" class="hero-bg-img">
@@ -275,11 +289,11 @@
 
         <!-- Carousel Pagination Dots -->
         <div class="hero-pagination" id="heroPagination">
-          <button class="page-dot active" data-index="0" aria-label="Slide 1"></button>
-          <button class="page-dot" data-index="1" aria-label="Slide 2"></button>
+          <button class="page-dot" data-index="0" aria-label="Slide 1"></button>
+          <button class="page-dot active" data-index="1" aria-label="Slide 2"></button>
           <button class="page-dot" data-index="2" aria-label="Slide 3"></button>
           <button class="page-dot" data-index="3" aria-label="Slide 4"></button>
-          <button class="page-dot active" data-index="4" aria-label="Slide 5"></button>
+          <button class="page-dot" data-index="4" aria-label="Slide 5"></button>
         </div>
       </section>
     </main>
