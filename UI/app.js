@@ -32,6 +32,14 @@ function initHeroSlider() {
     
     currentSlideIndex = index;
 
+    if (heroSection) {
+      if (currentSlideIndex === 2) {
+        heroSection.classList.add('phone-slide-active');
+      } else {
+        heroSection.classList.remove('phone-slide-active');
+      }
+    }
+
     slides.forEach((slide, i) => {
       if (i === currentSlideIndex) {
         slide.classList.add('active');
