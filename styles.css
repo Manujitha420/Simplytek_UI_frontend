@@ -506,8 +506,8 @@ img {
 }
 
 .hero-drone-crop-img {
-  width: 1020px;
-  max-width: 65vw;
+  width: 1250px;
+  max-width: 70vw;
   max-height: 96vh;
   height: auto;
   object-fit: contain;
@@ -640,13 +640,18 @@ img {
 }
 
 .hero-accent-heading-drone {
-  color: #38BDF8;
-  font-size: 88px;
+  background: linear-gradient(135deg, #38BDF8 0%, #818CF8 50%, #A78BFA 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 80px;
   font-family: 'Russo One', sans-serif;
   font-weight: 400;
   line-height: 1.0;
   letter-spacing: 0px;
   display: inline-block;
+  text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .hero-accent-heading-laptop {
