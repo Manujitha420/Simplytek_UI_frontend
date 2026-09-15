@@ -595,8 +595,11 @@ img {
 }
 
 .hero-accent-heading {
-  color: #38BDF8;
-  font-size: 96px;
+  background: linear-gradient(135deg, #38BDF8 0%, #818CF8 50%, #A78BFA 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 76px;
   font-family: 'BBH Bartle', 'Unbounded', 'Syne', sans-serif;
   font-weight: 700;
   line-height: 1.0;
