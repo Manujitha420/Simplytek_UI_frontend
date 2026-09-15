@@ -94,7 +94,7 @@ img {
   width: 100%;
   max-height: 100vh;
   max-height: 100dvh;
-  overflow: hidden;
+  overflow: auto;
   background: #070B14;
 }
 
@@ -431,19 +431,19 @@ img {
 .hero-product-crop-container {
   position: absolute;
   top: 50%;
-  right: -2%;
-  transform: translateY(-50%);
+  right: -12%;
+  transform: translateY(-48%);
   z-index: 4;
   pointer-events: none;
 }
 
 .hero-headphone-crop-img {
-  width: 980px;
-  max-width: 62vw;
-  max-height: 95vh;
+  width: 1700px;
   height: auto;
   object-fit: contain;
-  filter: drop-shadow(0 25px 60px rgba(0, 0, 0, 0.75));
+  filter: drop-shadow(0 25px 60px rgba(0, 0, 0, 0.75)) brightness(0.75);
+  -webkit-mask-image: radial-gradient(ellipse 75% 75% at 45% 48%, rgba(0,0,0,1) 40%, rgba(0,0,0,0.85) 60%, rgba(0,0,0,0) 100%);
+  mask-image: radial-gradient(ellipse 75% 75% at 45% 48%, rgba(0,0,0,1) 40%, rgba(0,0,0,0.85) 60%, rgba(0,0,0,0) 100%);
 }
 
 /* Smartphone Product Crop Image Layer */
@@ -530,10 +530,10 @@ img {
   width: 100%;
   height: 100%;
   margin: 0 auto;
-  padding: 0 64px;
+  padding: 80px 64px 0;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
   pointer-events: none;
 }
@@ -575,7 +575,7 @@ img {
 
 .hero-main-heading {
   color: #ffffff;
-  font-size: 88px;
+  font-size: 100px;
   font-family: 'Space Grotesk', sans-serif;
   font-weight: 800;
   line-height: 1.02;
@@ -584,7 +584,7 @@ img {
 
 .hero-accent-heading {
   color: #38BDF8;
-  font-size: 84px;
+  font-size: 96px;
   font-family: 'BBH Bartle', 'Unbounded', 'Syne', sans-serif;
   font-weight: 700;
   line-height: 1.0;
@@ -909,6 +909,17 @@ img {
 @keyframes float {
   0%, 100% { transform: translateY(0px) rotate(0deg); }
   50% { transform: translateY(-16px) rotate(1deg); }
+}
+
+/* Centered Bottom CTA Button */
+.hero-bottom-cta {
+  position: absolute;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 15;
+  display: flex;
+  justify-content: center;
 }
 
 /* Pagination Dots */
