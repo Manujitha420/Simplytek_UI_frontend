@@ -450,16 +450,16 @@ img {
 .hero-phone-crop-container {
   position: absolute;
   top: 48%;
-  right: 2%;
+  right: -4%;
   transform: translateY(-50%);
   z-index: 4;
   pointer-events: none;
 }
 
 .hero-phone-crop-img {
-  width: 780px;
-  max-width: 50vw;
-  max-height: 92vh;
+  width: 1050px;
+  max-width: 65vw;
+  max-height: 96vh;
   height: auto;
   object-fit: contain;
   filter: drop-shadow(0 25px 60px rgba(0, 0, 0, 0.75));
@@ -594,13 +594,17 @@ img {
 }
 
 .hero-accent-heading-future {
-  color: #38BDF8;
+  background: linear-gradient(135deg, #38BDF8 0%, #818CF8 50%, #A78BFA 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-size: 88px;
   font-family: 'Bruno Ace SC', 'Space Grotesk', sans-serif;
   font-weight: 400;
   line-height: 1.0;
   letter-spacing: 0px;
   display: inline-block;
+  text-transform: uppercase;
 }
 
 .hero-accent-heading-camera {
