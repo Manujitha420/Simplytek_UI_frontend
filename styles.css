@@ -4,6 +4,8 @@
 
 /* --- CSS Variables & Design Tokens --- */
 :root {
+  --container-7xl: 80rem; /* 1280px */
+
   --font-body: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-heading: 'Space Grotesk', sans-serif;
   --font-expanded: 'BBH Bartle', 'Unbounded', 'Syne', sans-serif;
@@ -199,7 +201,7 @@ img {
 
 .nav-container {
   width: 100%;
-  max-width: 1280px;
+  max-width: var(--container-7xl); /* 80rem (1280px) */
   margin: 0 auto;
   padding: 0 32px;
   display: flex;
@@ -427,16 +429,16 @@ img {
 .hero-product-crop-container {
   position: absolute;
   top: 50%;
-  right: 0%;
+  right: -2%;
   transform: translateY(-50%);
   z-index: 4;
   pointer-events: none;
 }
 
 .hero-headphone-crop-img {
-  width: 840px;
-  max-width: 54vw;
-  max-height: 88vh;
+  width: 980px;
+  max-width: 62vw;
+  max-height: 95vh;
   height: auto;
   object-fit: contain;
   filter: drop-shadow(0 25px 60px rgba(0, 0, 0, 0.75));
@@ -453,9 +455,9 @@ img {
 }
 
 .hero-phone-crop-img {
-  width: 640px;
-  max-width: 44vw;
-  max-height: 82vh;
+  width: 780px;
+  max-width: 50vw;
+  max-height: 92vh;
   height: auto;
   object-fit: contain;
   filter: drop-shadow(0 25px 60px rgba(0, 0, 0, 0.75));
@@ -465,16 +467,16 @@ img {
 .hero-camera-crop-container {
   position: absolute;
   top: 46%;
-  right: 0%;
+  right: -2%;
   transform: translateY(-50%);
   z-index: 4;
   pointer-events: none;
 }
 
 .hero-camera-crop-img {
-  width: 860px;
-  max-width: 54vw;
-  max-height: 88vh;
+  width: 960px;
+  max-width: 60vw;
+  max-height: 95vh;
   height: auto;
   object-fit: contain;
   filter: drop-shadow(0 25px 60px rgba(0, 0, 0, 0.75));
@@ -484,16 +486,16 @@ img {
 .hero-drone-crop-container {
   position: absolute;
   top: 48%;
-  right: 0%;
+  right: -4%;
   transform: translateY(-50%);
   z-index: 4;
   pointer-events: none;
 }
 
 .hero-drone-crop-img {
-  width: 880px;
-  max-width: 56vw;
-  max-height: 90vh;
+  width: 1020px;
+  max-width: 65vw;
+  max-height: 96vh;
   height: auto;
   object-fit: contain;
   filter: drop-shadow(0 25px 60px rgba(0, 0, 0, 0.75));
@@ -503,16 +505,16 @@ img {
 .hero-laptop-crop-container {
   position: absolute;
   top: 48%;
-  right: 1%;
+  right: 0%;
   transform: translateY(-50%);
   z-index: 4;
   pointer-events: none;
 }
 
 .hero-laptop-crop-img {
-  width: 800px;
-  max-width: 50vw;
-  max-height: 86vh;
+  width: 960px;
+  max-width: 60vw;
+  max-height: 95vh;
   height: auto;
   object-fit: contain;
   filter: drop-shadow(0 25px 60px rgba(0, 0, 0, 0.75));
@@ -522,7 +524,7 @@ img {
 .hero-content-layer {
   position: relative;
   z-index: 10;
-  max-width: 1099px;
+  max-width: var(--container-7xl); /* 80rem (1280px) */
   width: 100%;
   height: 100%;
   margin: 0 auto;
@@ -566,21 +568,21 @@ img {
 /* Headline Group */
 .hero-title-group {
   margin-bottom: 28px;
-  max-width: 800px;
+  max-width: 880px;
 }
 
 .hero-main-heading {
   color: #ffffff;
-  font-size: 80px;
+  font-size: 88px;
   font-family: 'Space Grotesk', sans-serif;
   font-weight: 800;
-  line-height: 1.05;
+  line-height: 1.02;
   letter-spacing: -0.01em;
 }
 
 .hero-accent-heading {
   color: #38BDF8;
-  font-size: 76px;
+  font-size: 84px;
   font-family: 'BBH Bartle', 'Unbounded', 'Syne', sans-serif;
   font-weight: 700;
   line-height: 1.0;
@@ -594,14 +596,14 @@ img {
   font-size: 88px;
   font-family: 'Bruno Ace SC', 'Space Grotesk', sans-serif;
   font-weight: 400;
-  line-height: 93.28px;
+  line-height: 1.0;
   letter-spacing: 0px;
   display: inline-block;
 }
 
 .hero-accent-heading-camera {
   color: #38BDF8;
-  font-size: 56px;
+  font-size: 68px;
   font-family: 'Rock Salt', cursive, sans-serif;
   font-weight: 400;
   line-height: 1.15;
@@ -620,7 +622,7 @@ img {
   font-size: 88px;
   font-family: 'Russo One', sans-serif;
   font-weight: 400;
-  line-height: 93.28px;
+  line-height: 1.0;
   letter-spacing: 0px;
   display: inline-block;
 }
@@ -630,7 +632,7 @@ img {
   font-size: 88px;
   font-family: 'Zen Dots', cursive, sans-serif;
   font-weight: 400;
-  line-height: 93.28px;
+  line-height: 1.0;
   letter-spacing: 0px;
   display: inline-block;
 }
@@ -640,7 +642,7 @@ img {
   font-family: 'Space Grotesk', sans-serif;
   font-weight: 800;
   display: inline-block;
-  font-size: 52px;
+  font-size: inherit;
   line-height: 1;
   margin-left: 2px;
 }
