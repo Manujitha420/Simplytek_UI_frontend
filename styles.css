@@ -1081,22 +1081,47 @@ img {
 }
 
 .page-dot {
+  position: relative;
   width: 10px;
   height: 10px;
   border-radius: 5px;
-  background: rgba(255, 255, 255, 0.2);
-  transition: all var(--transition-fast);
+  background: rgba(255, 255, 255, 0.25);
+  transition: width 0.3s ease, background 0.3s ease;
   cursor: pointer;
+  overflow: hidden;
 }
 
 .page-dot:hover {
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.45);
 }
 
 .page-dot.active {
-  width: 36px;
-  background: var(--gradient-cyan-purple);
-  box-shadow: 0 0 12px rgba(56, 189, 248, 0.5);
+  width: 48px;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 12px rgba(56, 189, 248, 0.3);
+}
+
+.page-dot.active::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(135deg, #38BDF8 0%, #818CF8 50%, #A78BFA 100%);
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.6);
+  animation: dotProgress 5s linear forwards;
+}
+
+@keyframes dotProgress {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 100%;
+  }
 }
 
 /* ==========================================================================

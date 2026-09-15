@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
 let currentSlideIndex = 0;
 let slideInterval = null;
 const SLIDE_COUNT = 5;
-const AUTO_PLAY_DELAY = 10000;
+const AUTO_PLAY_DELAY = 5000;
 
 function initHeroSlider() {
   const slides = document.querySelectorAll('.hero-slide');
@@ -24,8 +24,9 @@ function initHeroSlider() {
 
   if (!slides.length || !dots.length) return;
 
-  // Initialize to Slide 2 (Laptops)
+  // Initialize to Slide 2 (Laptops) and start 5s autoplay
   goToSlide(1);
+  startAutoPlay();
 
   function goToSlide(index) {
     if (index < 0) index = SLIDE_COUNT - 1;
@@ -49,13 +50,11 @@ function initHeroSlider() {
       }
     });
 
-    dots.forEach((dot, i) => {
-      if (i === currentSlideIndex) {
-        dot.classList.add('active');
-      } else {
-        dot.classList.remove('active');
-      }
-    });
+    dots.forEach(dot => dot.classList.remove('active'));
+    if (dots[currentSlideIndex]) {
+      void dots[currentSlideIndex].offsetWidth; // Force reflow to restart 5s progress bar
+      dots[currentSlideIndex].classList.add('active');
+    }
   }
 
   function startAutoPlay() {
@@ -81,23 +80,16 @@ function initHeroSlider() {
     });
   });
 
-  // Pause on hover
-  if (heroSection) {
-    heroSection.addEventListener('mouseenter', stopAutoPlay);
-    heroSection.addEventListener('mouseleave', startAutoPlay);
-  }
-
-  // Keyboard navigation
+  // Keyboard Navigation (Arrow Left & Arrow Right)
   document.addEventListener('keydown', (e) => {
-    const mainStoreView = document.getElementById('mainStoreView');
-    if (mainStoreView && mainStoreView.classList.contains('active-view')) {
-      if (e.key === 'ArrowLeft') {
-        goToSlide(currentSlideIndex - 1);
-        startAutoPlay();
-      } else if (e.key === 'ArrowRight') {
-        goToSlide(currentSlideIndex + 1);
-        startAutoPlay();
-      }
+    if (['INPUT', 'TEXTAREA', 'SELECT'].includes(document.activeElement.tagName)) return;
+
+    if (e.key === 'ArrowLeft') {
+      goToSlide(currentSlideIndex - 1);
+      startAutoPlay();
+    } else if (e.key === 'ArrowRight') {
+      goToSlide(currentSlideIndex + 1);
+      startAutoPlay();
     }
   });
 
