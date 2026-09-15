@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initHeroSlider();
   initViewSwitcher();
   initModalsAndDrawers();
+  initNavbarScroll();
 });
 
 /* --------------------------------------------------------------------------
@@ -406,3 +407,22 @@ window.showToast = function(message) {
     setTimeout(() => toast.remove(), 300);
   }, 3200);
 };
+
+/* --------------------------------------------------------------------------
+   6. NAVBAR SCROLL CONTROLLER
+   -------------------------------------------------------------------------- */
+function initNavbarScroll() {
+  const navbar = document.querySelector('.navbar');
+  if (!navbar) return;
+
+  const handleScroll = () => {
+    if (window.scrollY > 20) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  };
+
+  window.addEventListener('scroll', handleScroll, { passive: true });
+  handleScroll();
+}

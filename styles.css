@@ -208,6 +208,15 @@ img {
   height: 64px;
   display: flex;
   align-items: center;
+  transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* White background on hover or when scrolled down */
+.navbar:hover,
+.navbar.scrolled {
+  background: #ffffff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
 .nav-container {
@@ -250,6 +259,12 @@ img {
   font-size: 18px;
   line-height: 28px;
   color: #ffffff;
+  transition: color 0.3s ease;
+}
+
+.navbar:hover .logo-text,
+.navbar.scrolled .logo-text {
+  color: #0F172A;
 }
 
 .logo-highlight {
@@ -271,7 +286,12 @@ img {
   color: #CBD5E1;
   position: relative;
   padding: 4px 0;
-  transition: color var(--transition-fast);
+  transition: color 0.3s ease;
+}
+
+.navbar:hover .nav-link,
+.navbar.scrolled .nav-link {
+  color: #334155;
 }
 
 .nav-link::after {
@@ -287,7 +307,11 @@ img {
 }
 
 .nav-link:hover,
-.nav-link.active {
+.nav-link.active,
+.navbar:hover .nav-link:hover,
+.navbar:hover .nav-link.active,
+.navbar.scrolled .nav-link:hover,
+.navbar.scrolled .nav-link.active {
   color: #0EA5E9;
 }
 
@@ -310,13 +334,26 @@ img {
   align-items: center;
   justify-content: center;
   color: #94A3B8;
-  transition: all var(--transition-fast);
+  transition: color 0.3s ease, background 0.3s ease, transform 0.2s ease;
   position: relative;
 }
 
+.navbar:hover .icon-btn,
+.navbar.scrolled .icon-btn {
+  color: #334155;
+}
+
 .icon-btn:hover {
-  background: rgba(255, 255, 255, 0.08);
-  color: #ffffff;
+  background: rgba(255, 255, 255, 0.12);
+  color: #0EA5E9;
+  transform: translateY(-1px);
+}
+
+.navbar:hover .icon-btn:hover,
+.navbar.scrolled .icon-btn:hover {
+  background: rgba(0, 0, 0, 0.06);
+  color: #0EA5E9;
+  transform: translateY(-1px);
 }
 
 .cart-btn {
