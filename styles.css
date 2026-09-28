@@ -1259,8 +1259,9 @@ img {
 .auth-left-banner {
   position: relative;
   background-size: cover;
-  background-position: center;
-  padding: 60px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding: 48px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1270,7 +1271,7 @@ img {
 .auth-banner-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(30, 16, 60, 0.65) 0%, rgba(8, 12, 20, 0.95) 100%);
+  background: linear-gradient(180deg, rgba(15, 10, 30, 0.15) 0%, rgba(8, 12, 20, 0.35) 50%, rgba(5, 8, 16, 0.85) 100%);
   z-index: 1;
 }
 
@@ -1284,22 +1285,31 @@ img {
 }
 
 .banner-hero-text {
-  margin-top: 80px;
+  margin-top: auto;
+  margin-bottom: 32px;
 }
 
 .banner-title {
   font-family: var(--font-heading);
-  font-size: 48px;
+  font-size: 44px;
   font-weight: 800;
   line-height: 1.15;
   color: #ffffff;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
+}
+
+.banner-title-gradient {
+  background: linear-gradient(135deg, #38BDF8 0%, #818CF8 50%, #A78BFA 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
 }
 
 .banner-subtext {
-  font-size: 16px;
+  font-size: 15px;
   color: #cbd5e1;
-  max-width: 440px;
+  max-width: 420px;
   line-height: 1.6;
 }
 
@@ -1307,7 +1317,12 @@ img {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  margin-top: 40px;
+  padding: 24px 48px;
+  margin: 0 -48px -48px -48px;
+  background: rgba(5, 9, 18, 0.75);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
 .feature-item {
