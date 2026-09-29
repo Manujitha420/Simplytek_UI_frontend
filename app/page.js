@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import MarqueeBar from '../components/MarqueeBar';
 import Navbar from '../components/Navbar';
 import HeroSlider from '../components/HeroSlider';
 import AuthView from '../components/AuthView';
@@ -26,13 +27,13 @@ export default function Home() {
       title: 'Sony WH-1000XM6 Wireless Headphones',
       price: 399,
       quantity: 1,
-      image: 'Images/Crop/Sony_ Headphones 1.png'
+      image: '/Images/Crop/Gemini_Generated_Image_e5g5lee5g5lee5g5-nobg.png'
     },
     {
       title: 'DJI Avata 4K FPV Drone',
       price: 999,
       quantity: 1,
-      image: 'Images/Crop/Gemini_Generated_Image_c1dnnkc1dnnkc1dn.png'
+      image: '/Images/Crop/Gemini_Generated_Image_c1dnnkc1dnnkc1dn.png'
     }
   ]);
 
@@ -53,6 +54,17 @@ export default function Home() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Automatic slide transition every 5 seconds (5000ms)
+  useEffect(() => {
+    if (currentView !== 'store') return;
+
+    const slideTimer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % 5);
+    }, 5000);
+
+    return () => clearInterval(slideTimer);
+  }, [currentView, currentSlide]);
 
   const handleAddToCart = (item) => {
     setCartItems((prevItems) => {
@@ -97,13 +109,15 @@ export default function Home() {
   };
 
   return (
-    <div className="app-container">
+    <div className="app-root">
       {/* Toast Alert */}
       <Toast message={toastMessage} />
 
       {/* Main Store View */}
       {currentView === 'store' && (
         <div className="view-panel store-view active-view">
+          <MarqueeBar />
+
           <Navbar
             scrolled={scrolled}
             currentSlide={currentSlide}

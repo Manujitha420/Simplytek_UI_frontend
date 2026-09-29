@@ -4,38 +4,40 @@ export default function HeroSlider({ currentSlide, onSelectSlide, onShowToast, o
   const slides = [
     {
       id: 0,
-      category: 'AUDIO & HEADPHONES',
-      bgImg: 'Images/BG/Image.png',
-      cropImg: 'Images/Crop/Sony_ Headphones 1.png',
-      cropAlt: 'Sony WH-1000XM6 Headphones Crop',
+      category: 'HEADPHONES & EARPHONES',
+      bgImg: '/Images/BG/0801dd1423fa7c87b7b588d47af82ce8b25ef1f8.jpg',
+      cropImg: '/Images/Crop/Gemini_Generated_Image_e5g5lee5g5lee5g5-nobg.png',
+      cropAlt: 'Premium Wireless Headphones',
       cropClass: 'hero-headphone-crop-img',
-      cropContainerClass: 'hero-headphone-crop-container',
+      cropContainerClass: 'hero-product-crop-container',
       radialClass: 'hero-bg-overlay-radial',
       title: (
-        <h1 className="hero-main-heading">
-          SOUND<br />MEANT TO <br />
-          <span className="hero-accent-heading">BE HEARD<span className="heading-period">.</span></span>
-        </h1>
+        <div className="hero-title-group">
+          <h1 className="hero-main-heading">Hear Music the Way It Was</h1>
+          <div className="hero-accent-heading">MEANT TO <br />SOUND<span className="heading-period">.</span></div>
+        </div>
       ),
-      subtext: 'Next-generation acoustic precision, active noise cancellation and masterfully tuned wireless freedom.',
-      ctaBtnText: 'Shop Headphones',
+      subtext: 'Industry leading noise cancellation, high resolution audio and all day comfort your world, your sound.',
+      ctaBtnText: 'Shop Now',
       itemTitle: 'Sony WH-1000XM6 Wireless Headphones',
       itemPrice: 399
     },
     {
       id: 1,
       category: 'LAPTOPS & COMPUTING',
-      bgImg: 'Images/BG/Image (1).png',
-      cropImg: 'Images/Crop/_ (7) 1.png',
-      cropAlt: 'MacBook Pro M3 Max Crop',
+      bgImg: '/Images/BG/Image (LAPTOPS).png',
+      cropImg: '/Images/Crop/Mac Bro _ Social Media Design _ Reels Cover 1.png',
+      cropAlt: 'MacBook Professional Laptop Crop',
       cropClass: 'hero-laptop-crop-img',
       cropContainerClass: 'hero-laptop-crop-container',
       radialClass: 'hero-bg-overlay-radial-laptop',
       title: (
-        <h1 className="hero-main-heading">
-          LIMITLESS<br />Performance <br />
-          <span className="hero-accent-heading-laptop">Unmatched Speed<span className="heading-period">.</span></span>
-        </h1>
+        <div className="hero-title-group">
+          <h1 className="hero-main-heading">
+            LIMITLESS<br />Performance <br />
+            <span className="hero-accent-heading-laptop">Unmatched Speed<span className="heading-period">.</span></span>
+          </h1>
+        </div>
       ),
       subtext: 'Pro-grade processors, liquid retina displays and all-day battery power built for creators and engineers.',
       ctaBtnText: 'Shop Laptops',
@@ -45,39 +47,41 @@ export default function HeroSlider({ currentSlide, onSelectSlide, onShowToast, o
     {
       id: 2,
       category: 'SMARTPHONES',
-      bgImg: 'Images/BG/Image (SMARTPHONES).png',
-      cropImg: 'Images/Crop/Image (SMARTPHONES CROP).png',
+      bgImg: '/Images/BG/3147af643d1a2f13f52036aeaea5fac0b6bb8050.jpg',
+      cropImg: '/Images/Crop/550252c942e1e715d07a433402f5efe4da71f100.png',
       cropAlt: 'Flagship Smartphone Crop',
-      cropClass: 'hero-headphone-crop-img',
-      cropContainerClass: 'hero-smartphone-crop-container',
-      radialClass: 'hero-bg-overlay-radial-smartphone',
+      cropClass: 'hero-phone-crop-img',
+      cropContainerClass: 'hero-phone-crop-container',
+      radialClass: 'hero-bg-overlay-radial-phone',
       title: (
-        <h1 className="hero-main-heading">
-          Smarter Tech<br />
-          <span className="smartphone-detail-wrapper">
-            and Portability<span className="heading-period">.</span>
-          </span>
-        </h1>
+        <div className="hero-title-group">
+          <h1 className="hero-main-heading">
+            The <span className="hero-accent-heading-future">FUTURE</span><br />
+            Is In Your Hands<span className="heading-period">.</span>
+          </h1>
+        </div>
       ),
-      subtext: 'Flagship mobile devices with pro camera systems, vivid displays and ultra-fast 5G connectivity.',
-      ctaBtnText: 'Shop Smartphones',
+      subtext: 'The latest flagship smartphones with pro grade cameras, powerful processors and all day battery life.',
+      ctaBtnText: 'Shop Now',
       itemTitle: 'iPhone 15 Pro Max 256GB',
       itemPrice: 1199
     },
     {
       id: 3,
       category: 'CAMERAS & EQUIPMENT',
-      bgImg: 'Images/BG/Image (CAMERAS).png',
-      cropImg: 'Images/Crop/_ (6) 1.png',
+      bgImg: '/Images/BG/b8a1eeb26d006747c5bf25eb31f222c79327bce8.jpg',
+      cropImg: '/Images/Crop/_ (6) 1.png',
       cropAlt: 'Professional Camera Gear Crop',
       cropClass: 'hero-camera-crop-img',
       cropContainerClass: 'hero-camera-crop-container',
       radialClass: 'hero-bg-overlay-radial-camera',
       title: (
-        <h1 className="hero-main-heading">
-          Capture Every<br />Moment in <br />
-          <span className="hero-accent-heading-camera">Stunning Detail<span className="heading-period">.</span></span>
-        </h1>
+        <div className="hero-title-group">
+          <h1 className="hero-main-heading">
+            Capture Every<br />Moment in <br />
+            <span className="hero-accent-heading-camera">Stunning Detail<span className="heading-period">.</span></span>
+          </h1>
+        </div>
       ),
       subtext: 'DSLRs, mirrorless cameras and professional lenses gear up and tell your story beautifully.',
       ctaBtnText: 'Shop Camera Gear',
@@ -87,16 +91,18 @@ export default function HeroSlider({ currentSlide, onSelectSlide, onShowToast, o
     {
       id: 4,
       category: 'DRONES',
-      bgImg: 'Images/BG/Image (DRONES).png',
-      cropImg: 'Images/Crop/Gemini_Generated_Image_c1dnnkc1dnnkc1dn.png',
+      bgImg: '/Images/BG/Image (DRONES).png',
+      cropImg: '/Images/Crop/Gemini_Generated_Image_c1dnnkc1dnnkc1dn.png',
       cropAlt: 'DJI Professional Camera Drone Crop',
       cropClass: 'hero-drone-crop-img',
       cropContainerClass: 'hero-drone-crop-container',
       radialClass: 'hero-bg-overlay-radial-drone',
       title: (
-        <h1 className="hero-main-heading">
-          THE WORLD<br />from a <span className="hero-accent-heading-drone">NEW PERSPECTIVE<span className="heading-period">.</span></span>
-        </h1>
+        <div className="hero-title-group">
+          <h1 className="hero-main-heading">
+            THE WORLD<br />from a <span className="hero-accent-heading-drone">NEW PERSPECTIVE<span className="heading-period">.</span></span>
+          </h1>
+        </div>
       ),
       subtext: 'Professional and recreational drones with 4K stabilised cameras — explore the skies like never before.',
       ctaBtnText: 'Shop Drones',
@@ -105,23 +111,13 @@ export default function HeroSlider({ currentSlide, onSelectSlide, onShowToast, o
     }
   ];
 
-  const handlePrev = () => {
-    const nextIdx = (currentSlide - 1 + slides.length) % slides.length;
-    onSelectSlide(nextIdx);
-  };
-
-  const handleNext = () => {
-    const nextIdx = (currentSlide + 1) % slides.length;
-    onSelectSlide(nextIdx);
-  };
-
   return (
-    <section className="hero-slider-section">
+    <section className={`hero-section ${currentSlide === 2 ? 'phone-slide-active' : ''}`}>
       <div className="hero-slides-wrapper">
         {slides.map((slide) => {
           const isActive = slide.id === currentSlide;
           return (
-            <article key={slide.id} className={`hero-slide ${isActive ? 'active-slide' : ''}`}>
+            <article key={slide.id} className={`hero-slide ${isActive ? 'active' : ''}`}>
               {/* Background Layers */}
               <div className="hero-slide-bg-container">
                 <img src={slide.bgImg} alt={`${slide.category} Background`} className="hero-bg-img" />
@@ -141,14 +137,12 @@ export default function HeroSlider({ currentSlide, onSelectSlide, onShowToast, o
                   <span className="category-tag-text">{slide.category}</span>
                 </div>
 
-                <div className="hero-title-group">
-                  {slide.title}
-                </div>
+                {slide.title}
 
                 <p className="hero-subtext">{slide.subtext}</p>
               </div>
 
-              {/* Bottom CTA Button */}
+              {/* Centered Bottom CTA */}
               <div className="hero-bottom-cta">
                 <button
                   className="btn btn-shop-now"
@@ -165,28 +159,14 @@ export default function HeroSlider({ currentSlide, onSelectSlide, onShowToast, o
         })}
       </div>
 
-      {/* Navigation Arrow Controls */}
-      <div className="hero-nav-arrows">
-        <button className="slider-arrow-btn prev-arrow" onClick={handlePrev} aria-label="Previous slide">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-            <polyline points="15 18 9 12 15 6"></polyline>
-          </svg>
-        </button>
-        <button className="slider-arrow-btn next-arrow" onClick={handleNext} aria-label="Next slide">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-            <polyline points="9 18 15 12 9 6"></polyline>
-          </svg>
-        </button>
-      </div>
-
-      {/* Slide Indicator Dots */}
-      <div className="hero-dots-container">
+      {/* Carousel Pagination Dots & Loading Bar */}
+      <div className="hero-pagination" id="heroPagination">
         {slides.map((slide) => (
           <button
-            key={slide.id}
-            className={`hero-dot ${slide.id === currentSlide ? 'active' : ''}`}
+            key={`${slide.id}-${slide.id === currentSlide ? 'active' : 'idle'}`}
+            className={`page-dot ${slide.id === currentSlide ? 'active' : ''}`}
             onClick={() => onSelectSlide(slide.id)}
-            aria-label={`Go to slide ${slide.id + 1}`}
+            aria-label={`Slide ${slide.id + 1}`}
           />
         ))}
       </div>

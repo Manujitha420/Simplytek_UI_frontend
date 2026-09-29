@@ -59,7 +59,7 @@ export default function AuthView({ initialTab = 'signin', onBackToStore, onShowT
     <div className="view-panel auth-page-container active-view">
       <div className="auth-split-layout">
         {/* Left Branding Showcase Panel */}
-        <div className="auth-left-banner" style={{ backgroundImage: "url('Images/BG/_ (8) 1.png')" }}>
+        <div className="auth-left-banner" style={{ backgroundImage: "url('/Images/BG/_ (8) 1.png')" }}>
           <div className="auth-banner-overlay"></div>
           <div className="auth-banner-content">
             <div className="brand-logo light-logo">

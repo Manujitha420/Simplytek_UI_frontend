@@ -1,27 +1,25 @@
 'use client';
 
 export default function CartDrawer({ isOpen, onClose, cartItems, onUpdateQuantity, onRemoveItem, onShowToast }) {
-  if (!isOpen) return null;
-
-  const subtotal = cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0);
-  const shipping = cartItems.length > 0 ? 15 : 0;
+  const subtotal = cartItems ? cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0) : 0;
+  const shipping = cartItems && cartItems.length > 0 ? 15 : 0;
   const total = subtotal + shipping;
 
   return (
-    <>
-      <div className="cart-backdrop active" onClick={onClose}></div>
+    <div className={`drawer-backdrop ${isOpen ? 'active' : ''}`}>
+      <div className="cart-backdrop-overlay" onClick={onClose}></div>
 
-      <aside className="cart-drawer active">
-        <div className="cart-header">
+      <aside className="cart-drawer-panel white-theme">
+        <div className="drawer-header">
           <div className="cart-title-group">
             <h3>Your Cart</h3>
-            <span className="cart-count-badge">({cartItems.reduce((acc, item) => acc + item.quantity, 0)} Items)</span>
+            <span className="cart-count-badge">({cartItems ? cartItems.reduce((acc, item) => acc + item.quantity, 0) : 0} Items)</span>
           </div>
           <button className="cart-close-btn" onClick={onClose} aria-label="Close cart">&times;</button>
         </div>
 
         <div className="cart-body">
-          {cartItems.length === 0 ? (
+          {!cartItems || cartItems.length === 0 ? (
             <div className="empty-cart-state">
               <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                 <circle cx="9" cy="21" r="1"></circle>
@@ -36,10 +34,10 @@ export default function CartDrawer({ isOpen, onClose, cartItems, onUpdateQuantit
               {cartItems.map((item, index) => (
                 <div key={index} className="cart-item">
                   <img src={item.image} alt={item.title} className="cart-item-img" />
-                  <div className="cart-item-details">
+                  <div className="cart-item-info">
                     <h4>{item.title}</h4>
                     <span className="cart-item-price">${item.price.toLocaleString()}</span>
-                    <div className="quantity-controls">
+                    <div className="qty-picker">
                       <button
                         className="qty-btn"
                         onClick={() => onUpdateQuantity(index, item.quantity - 1)}
@@ -64,24 +62,24 @@ export default function CartDrawer({ isOpen, onClose, cartItems, onUpdateQuantit
           )}
         </div>
 
-        {cartItems.length > 0 && (
-          <div className="cart-footer">
-            <div className="cart-summary-row">
+        {cartItems && cartItems.length > 0 && (
+          <div className="drawer-footer">
+            <div className="summary-row">
               <span>Subtotal</span>
-              <span>${subtotal.toLocaleString()}</span>
+              <span className="summary-price">${subtotal.toLocaleString()}</span>
             </div>
-            <div className="cart-summary-row">
+            <div className="summary-row shipping-row">
               <span>Estimated Shipping</span>
               <span>${shipping}</span>
             </div>
-            <div className="cart-summary-row total-row">
+            <div className="summary-row total-row">
               <span>Total</span>
-              <span>${total.toLocaleString()}</span>
+              <span className="summary-price total-price-val">${total.toLocaleString()}</span>
             </div>
             <button
-              className="btn btn-checkout-primary"
+              className="btn btn-checkout-cart"
               onClick={() => {
-                onShowToast('Redirecting to Secure Checkout...');
+                if (onShowToast) onShowToast('Redirecting to Secure Checkout...');
                 onClose();
               }}
             >
@@ -90,6 +88,6 @@ export default function CartDrawer({ isOpen, onClose, cartItems, onUpdateQuantit
           </div>
         )}
       </aside>
-    </>
+    </div>
   );
 }
